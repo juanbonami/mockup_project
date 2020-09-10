@@ -3,6 +3,55 @@ body {
     height: 100vh;
 }
 
-header {
-    background: rgb(62, 165, 155);
+header.container {
+    background: url('./images/Aesop-Homepage-Banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid;
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 4fr ;
+    grid-template-rows: 2fr 5fr;
+    height: 600px;
+}
+
+
+.shop {
+    border: solid;
+    text-align: right;
+    
+}
+
+.read {
+    border: solid;
+    text-align: right;
+    
+}
+
+.stores {
+    border: solid;
+    text-align: right;
+    
+}
+
+.search {
+    border: solid;
+    text-align: right;
+    
+}
+
+.login {
+    text-align: right;
+    border: solid;
+    
+}
+
+.aesop {
+    border: solid;
+    grid-column: 1 / 5;
+    padding: 15px;
+}
+
+.intro {
+    border: solid;
 }
