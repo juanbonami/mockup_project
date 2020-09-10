@@ -8,50 +8,51 @@ header.container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: solid;
+    /* border: solid; */
     display: grid;
     grid-template-columns: 60px 60px 60px 60px 4fr ;
     grid-template-rows: 2fr 5fr;
     height: 600px;
+    color: azure;
 }
 
 
 .shop {
-    border: solid;
+    /* border: solid; */
     text-align: right;
     
 }
 
 .read {
-    border: solid;
+    /* border: solid; */
     text-align: right;
     
 }
 
 .stores {
-    border: solid;
+    /* border: solid; */
     text-align: right;
     
 }
 
 .search {
-    border: solid;
+    /* border: solid; */
     text-align: right;
     
 }
 
 .login {
     text-align: right;
-    border: solid;
+    /* border: solid; */
     
 }
 
 .aesop {
-    border: solid;
+    /* border: solid; */
     grid-column: 1 / 5;
-    padding: 15px;
+    padding-left: 30px;
 }
 
 .intro {
-    border: solid;
+    padding-left: 120px;
 }
