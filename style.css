@@ -14,6 +14,7 @@ header.grid-container {
     grid-template-rows: 2fr 5fr;
     height: 600px;
     color: azure;
+    padding: 18px;
 }
 
 
