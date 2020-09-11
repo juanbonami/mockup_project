@@ -3,7 +3,7 @@ body {
     height: 100vh;
 }
 
-header.container {
+header.grid-container {
     background: url('./images/Aesop-Homepage-Banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
