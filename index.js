@@ -3,7 +3,10 @@
 
     $(document).ready(function(){
 
-        $('.carousel').flickity();
+        $('.carousel').flickity({
+            cellAlign: 'left',
+            contain: true
+        });
         })
 
     })(jQuery)
