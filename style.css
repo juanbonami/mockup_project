@@ -126,6 +126,11 @@ header.grid-container {
     padding-top: 300px;
     padding-bottom: 200px;
     display: flex;
-    justify-content: space-between;
+    align-self: flex-end;
 }
 
+.image-in-second-parent-div {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+}
