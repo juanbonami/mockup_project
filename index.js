@@ -5,7 +5,8 @@
 
         $('.carousel').flickity({
             cellAlign: 'left',
-            contain: true
+            contain: true,
+            // groupCells: true
         });
         })
 
