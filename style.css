@@ -134,3 +134,11 @@ header.grid-container {
     justify-content: flex-end;
     padding: 0px;
 }
+
+.one-row-two-col {
+    margin-top: 300px;
+}
+
+.start {
+    padding: 50px;
+}
