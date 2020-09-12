@@ -58,13 +58,74 @@ header.grid-container {
 }
 
 
+
+
 /* carousel */
 .carousel {
     padding: 100px;
     
 }
 
-.first-cell {
-    border: 
+
+/* position dots up a bit */
+.flickity-page-dots {
+    bottom: -22px;
+  }
+  /* dots are lines */
+  .flickity-page-dots .dot {
+    height: 2px;
+    width: 300px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* square button */
+.flickity-button {
+    background: #333;
+  }
+  .flickity-button:hover {
+    background: #333;
+  }
+  
+  .flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+  }
+  /* icon color */
+  .flickity-button-icon {
+    fill: white;
+  }
+  /* position outside */
+  .flickity-prev-next-button.previous {
+    height: 70px;
+    width: 70px;
+  }
+  .flickity-prev-next-button.next {
+    height: 70px;
+    width: 70px;
+  }
+
+  /* size of cell */
+  .carousel-cell {
+    width: 25%; /* full width */
+    margin-right: 10px;
+    
+  }
+
+
+  
+/* second parent-div */
+  .first-text-in-second-parent-div {
+    padding: 70px;
+    padding-top: 0px;
     
 }
+
+.third-container {
+    padding-top: 300px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
