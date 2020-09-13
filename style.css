@@ -142,3 +142,7 @@ header.grid-container {
 .start {
     padding: 50px;
 }
+
+.add-padding {
+    padding-left: 50px;
+}
