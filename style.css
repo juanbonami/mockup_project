@@ -157,10 +157,11 @@ header.grid-container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 100px;
+    height: 150px;
 }
 
 .moveText {
     display: flex;
     justify-content: center;
+    height: 150px;
 }
