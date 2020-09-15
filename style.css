@@ -150,4 +150,10 @@ header.grid-container {
 .moveImage {
     display: flex;
     justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.moveQuote {
+    display: flex;
+    justify-content: center;
 }
