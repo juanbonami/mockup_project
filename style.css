@@ -146,3 +146,8 @@ header.grid-container {
 .add-padding {
     padding-left: 50px;
 }
+
+.moveImage {
+    display: flex;
+    justify-content: flex-end;
+}
