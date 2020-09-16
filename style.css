@@ -109,7 +109,8 @@ header.grid-container {
   /* size of cell */
   .carousel-cell {
     width: 25%; /* full width */
-    margin-right: 10px;
+    margin-right: 0px;
+    border: solid;
     
   }
 
