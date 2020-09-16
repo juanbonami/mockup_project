@@ -116,8 +116,14 @@ header.grid-container {
   }
 
   .carousel-cell.largeCell {
-      margin-right: 40px;
+      /* margin-right: 40px; */
       width: 40%;
+  }
+
+  .carousel-cell.mediumCell {
+    width: 30%;
+    height: 100%;
+    padding-top: 87px;
   }
 
 
