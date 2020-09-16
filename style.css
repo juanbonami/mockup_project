@@ -165,3 +165,9 @@ header.grid-container {
     justify-content: center;
     height: 150px;
 }
+
+.footerStyle {
+    padding: 20px;
+    background-color: #252525;
+    color: #ffffff;
+}
