@@ -108,15 +108,16 @@ header.grid-container {
 
   /* size of cell */
   .carousel-cell {
-    width: 25%; /* full width */
+    width: 25%; /* 25% width */
     margin-right: 40px;
     border: solid;
+    text-align: center;
     
   }
 
   .carousel-cell.largeCell {
-      margin-right: 250px;
-    
+      margin-right: 40px;
+      width: 40%;
   }
 
 
