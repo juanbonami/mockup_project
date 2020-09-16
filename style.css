@@ -74,7 +74,7 @@ header.grid-container {
   /* dots are lines */
   .flickity-page-dots .dot {
     height: 2px;
-    width: 300px;
+    width: 900px;
     margin: 0;
     border-radius: 0;
   }
@@ -109,8 +109,13 @@ header.grid-container {
   /* size of cell */
   .carousel-cell {
     width: 25%; /* full width */
-    margin-right: 0px;
+    margin-right: 40px;
     border: solid;
+    
+  }
+
+  .carousel-cell.largeCell {
+      margin-right: 250px;
     
   }
 
