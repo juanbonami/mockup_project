@@ -110,7 +110,7 @@ header.grid-container {
   .carousel-cell {
     width: 25%; /* 25% width */
     margin-right: 40px;
-    border: solid;
+    /* border: solid; */
     text-align: center;
     
   }
@@ -124,6 +124,11 @@ header.grid-container {
     width: 30%;
     height: 100%;
     padding-top: 87px;
+  }
+
+  .carousel-cell.largerSlider {
+      width: 100%;
+      border: solid;
   }
 
 
@@ -184,4 +189,12 @@ header.grid-container {
     background-color: #252525;
     color: #ffffff;
     margin-top: 40px;
+}
+
+@import url(//db.onlinewebfonts.com/c/88f10bf18a36407ef36bf30bc25a3618?family=Suisse+Intl);
+
+@font-face {font-family: "Suisse Intl"; src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot"); src: url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff") format("woff"), url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.svg#Suisse Intl") format("svg"); }
+
+body {
+    font-family: "Suisse Intl";
 }
