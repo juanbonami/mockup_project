@@ -4,9 +4,11 @@
     $(document).ready(function(){
 
         $('.carousel').flickity({
-            cellAlign: 'left',
-            contain: true,
-            groupCells: 4
+            contain: false,
+            cellAlign: 'left'
+            
+            
+            
         });
         })
 
