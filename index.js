@@ -12,7 +12,8 @@
         });
 
         $('.start').flickity({
-            
+            groupCells: 1,
+            setGallerySize: false
         })
         })
 
