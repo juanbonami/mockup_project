@@ -22,7 +22,9 @@
 
 const faders = document.querySelectorAll('.fade-in');
 
-const options = {};
+const options = {
+    threshold: 1
+};
 
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
     entries.forEach(entry => {
