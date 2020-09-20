@@ -15,11 +15,16 @@ header.grid-container {
     color: azure;
     padding: 18px;
     opacity: 0;
-    transition: opacity 250ms ease-in;
+    transition: opacity 1s ease-in;
 }
 
-.grid-container.appear {
+.fade-in.appear {
     opacity: 1;
+}
+
+.carousel {
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 
@@ -158,6 +163,8 @@ header.grid-container {
     padding-bottom: 200px;
     display: flex;
     align-self: flex-end;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 .image-in-second-parent-div {
@@ -168,6 +175,8 @@ header.grid-container {
 
 .one-row-two-col {
     margin-top: 300px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 .start {
@@ -195,6 +204,16 @@ header.grid-container {
     display: flex;
     justify-content: center;
     height: 150px;
+}
+
+.second-to-last {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.footer-fade {
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 .footerStyle {
