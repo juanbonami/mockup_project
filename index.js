@@ -24,4 +24,12 @@ const faders = document.querySelector('.grid-container');
 
 const options = {};
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){}, options);
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+        }
+    })
+}, options);
