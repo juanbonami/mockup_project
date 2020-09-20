@@ -20,4 +20,4 @@
     })(jQuery)
 
 
-
+const faders = document.querySelector('.grid-container');

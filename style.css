@@ -18,6 +18,10 @@ header.grid-container {
     transition: opacity 250ms ease-in;
 }
 
+.grid-container.appear {
+    opacity: 1;
+}
+
 
 .shop {
     /* border: solid; */
