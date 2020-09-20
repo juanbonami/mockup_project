@@ -30,6 +30,10 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
             return;
         } else {
             entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
         }
     })
 }, options);
+
+
+appearOnScroll.observe(faders);
