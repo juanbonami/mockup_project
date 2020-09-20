@@ -14,6 +14,8 @@ header.grid-container {
     height: 600px;
     color: azure;
     padding: 18px;
+    opacity: 0;
+    transition: opacity 250ms ease-in;
 }
 
 
