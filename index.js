@@ -20,11 +20,9 @@
     })(jQuery)
 
 
-const faders = document.querySelector('.grid-container');
+const faders = document.querySelectorAll('.fade-in');
 
-const options = {
-    threshold: 1
-};
+const options = {};
 
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
     entries.forEach(entry => {
@@ -37,5 +35,6 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
     })
 }, options);
 
-
-appearOnScroll.observe(faders);
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);  
+})
