@@ -1,8 +1,18 @@
 body {
     height: 100vh;
+    
 }
 
-header.grid-container {
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.grid-container {
     background: url('./images/Aesop-Homepage-Banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -11,9 +21,11 @@ header.grid-container {
     /* display: grid;
     grid-template-columns: 60px 60px 60px 60px 4fr ;
     grid-template-rows: 2fr 5fr;
-    color: azure;
+    
     padding: 18px; */
+    color: azure;
     height: 600px;
+    width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in;
 }
