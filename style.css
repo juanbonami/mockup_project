@@ -17,7 +17,7 @@ html,body
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: solid;
+    /* border: solid; */
     /* display: grid; */
     /* grid-template-columns: 60px 60px 60px 60px 4fr ;
     grid-template-rows: 2fr 5fr;
@@ -72,14 +72,14 @@ html,body
 }
 
 .aesop {
-    border: solid;
+    /* border: solid; */
     /* grid-column: 1 / 5; */
     padding-left: 30px;
 }
 
 .intro {
     padding-left: 120px;
-    border: solid;
+    /* border: solid; */
 }
 
 
@@ -165,26 +165,28 @@ html,body
   
 /* second parent-div */
   .first-text-in-second-parent-div {
-    padding-right: 100px;
-    width: 640px;
+    /* padding-right: 100px;
+    width: 640px; */
     padding-top: 0px;
     text-align: center;
-    
+    /* border: solid; */
 }
 
 .third-container {
     padding-top: 300px;
     padding-bottom: 200px;
-    display: flex;
-    align-self: flex-end;
+    /* display: flex;
+    align-self: flex-end; */
     opacity: 0;
     transition: opacity 1s ease-in;
+    /* border: solid red; */
 }
 
 .image-in-second-parent-div {
     display: flex;
     justify-content: flex-end;
     padding: 0px;
+    /* border: solid; */
 }
 
 .one-row-two-col {
