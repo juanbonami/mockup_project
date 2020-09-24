@@ -248,3 +248,15 @@ body {
     font-size: 0.85rem;
     
 }
+
+@media only screen and (max-width: 375px) {
+    .carousel-cell {
+        width: 100%;
+        border: solid;
+    }
+
+    .flickity-page-dots .dot {
+        width: 50px;
+        
+      }
+}
