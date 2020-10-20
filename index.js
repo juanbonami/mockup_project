@@ -62,6 +62,13 @@ for (let i=0; i<carts.length; i++) {
     })
 }
 
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if (productNumbers) {
+        document.querySelector('.nav-link span').textContent = productNumbers;
+    }
+}
+
 function cartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
@@ -77,3 +84,5 @@ function cartNumbers() {
     }
     
 }
+
+onLoadCartNumbers();
