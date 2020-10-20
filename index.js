@@ -41,15 +41,30 @@ faders.forEach(fader => {
 
 let carts = document.querySelectorAll('.add-cart');
 
+let products = [
+    {
+        name: 'Hand wash',
+        tag: 'handwash',
+        price: 50,
+        inCart: 0
+    },
+    {
+        name: 'Hand Balm',
+        tag: 'handbalm',
+        price: 50,
+        inCart: 0
+    }
+]
+
 for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
-        let productNumbers = localStorage.getItem('cartNumbers');
-        console.log(productNumbers);
-        console.log(typeof productNumbers);
-
-        productNumbers = parseInt(productNumbers);
-        console.log(typeof productNumbers);
-
-        localStorage.setItem('cartNumbers', 1);
+        cartNumbers();
     })
+}
+
+function cartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    localStorage.setItem('cartNumbers', 1);
 }
