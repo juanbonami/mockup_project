@@ -66,5 +66,11 @@ function cartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
-    localStorage.setItem('cartNumbers', 1);
+    if (productNumbers) {
+       localStorage.setItem('cartNumbers', productNumbers + 1); 
+    }
+    else {
+        localStorage.setItem('cartNumbers', 1);
+    }
+    
 }
