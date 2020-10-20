@@ -5,10 +5,7 @@
 
         $('.carousel').flickity({
             contain: false,
-            cellAlign: 'left'
-            
-            
-            
+            cellAlign: 'left' 
         });
 
         $('.start').flickity({
@@ -40,3 +37,12 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 faders.forEach(fader => {
   appearOnScroll.observe(fader);  
 })
+
+
+let carts = document.querySelectorAll('.add-cart');
+
+for (let i=0; i<carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        console.log("I'm working")
+    })
+}

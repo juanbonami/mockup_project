@@ -271,7 +271,7 @@ body {
 
 .add-cart {
     background-color: darkgrey;
-    transition: all 0.3 ease-in;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
 }
