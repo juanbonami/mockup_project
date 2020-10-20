@@ -268,3 +268,11 @@ body {
         
       }
 }
+
+.add-cart {
+    background-color: darkgrey;
+    transition: all 0.3 ease-in;
+    opacity: 0;
+    cursor: pointer;
+    
+}
