@@ -43,6 +43,8 @@ let carts = document.querySelectorAll('.add-cart');
 
 for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
+        let productNumbers = localStorage.getItem('cartNumbers');
+        console.log(productNumbers);
         localStorage.setItem('cartNumbers', 1);
     })
 }
