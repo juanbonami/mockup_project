@@ -67,10 +67,13 @@ function cartNumbers() {
     productNumbers = parseInt(productNumbers);
 
     if (productNumbers) {
-       localStorage.setItem('cartNumbers', productNumbers + 1); 
+       localStorage.setItem('cartNumbers', productNumbers + 1);
+       document.querySelector('.nav-link span').textContent = productNumbers + 1;
+ 
     }
     else {
         localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.nav-link span').textContent = 1;
     }
     
 }
