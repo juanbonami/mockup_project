@@ -70,7 +70,6 @@ function onLoadCartNumbers() {
 }
 
 function cartNumbers(product) {
-    console.log('The product clicked is', product);
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
@@ -83,7 +82,14 @@ function cartNumbers(product) {
         localStorage.setItem('cartNumbers', 1);
         document.querySelector('.nav-link span').textContent = 1;
     }
+
+    setItems(product);
     
+}
+
+function setItems(product) {
+    console.log('inside function');
+    console.log('product is', product);
 }
 
 onLoadCartNumbers();
