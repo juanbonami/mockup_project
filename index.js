@@ -90,13 +90,18 @@ function cartNumbers(product) {
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log('cartItems are', cartItems);
+    
+    if (cartItems != null) {
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
 
-    product.inCart = 1;
-
-    cartItems = {
-        [product.tag]: product
+        cartItems = {
+            [product.tag]: product
+        }
     }
+
+    
 
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
