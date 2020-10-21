@@ -90,6 +90,13 @@ function cartNumbers(product) {
 function setItems(product) {
     console.log('inside function');
     console.log('product is', product);
+    product.inCart = 1;
+
+    let cartItems = {
+        [product.tag]: product
+    }
+
+    localStorage.setItem('productsInCart', cartItems)
 }
 
 onLoadCartNumbers();
