@@ -58,7 +58,7 @@ let products = [
 
 for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
-        cartNumbers();
+        cartNumbers(products[i]);
     })
 }
 
@@ -69,7 +69,8 @@ function onLoadCartNumbers() {
     }
 }
 
-function cartNumbers() {
+function cartNumbers(product) {
+    console.log('The product clicked is', product);
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
