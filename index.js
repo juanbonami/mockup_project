@@ -96,7 +96,7 @@ function setItems(product) {
         [product.tag]: product
     }
 
-    localStorage.setItem('productsInCart', cartItems)
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
 
 onLoadCartNumbers();
