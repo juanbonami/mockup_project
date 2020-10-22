@@ -115,6 +115,7 @@ function setItems(product) {
 
 function totalCost(product) {
     console.log('The product price is', product.price);
+    localStorage.setItem('totalCost', product.price);
 }
 
 onLoadCartNumbers();
