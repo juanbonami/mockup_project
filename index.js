@@ -116,10 +116,9 @@ function setItems(product) {
 function totalCost(product) {
     //console.log('The product price is', product.price);
     let cartCost = localStorage.getItem('totalCost');
-    cartCost = parseInt(cartCost);
-
+    
     if (cartCost != null) {
-        
+        cartCost = parseInt(cartCost);
         localStorage.setItem('totalCost', cartCost + product.price);
     } else {
        localStorage.setItem('totalCost', product.price); 
