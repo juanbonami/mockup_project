@@ -51,7 +51,7 @@ let products = [
     {
         name: 'Hand Balm',
         tag: 'handbalm',
-        price: 50,
+        price: 60,
         inCart: 0
     }
 ]
@@ -59,6 +59,7 @@ let products = [
 for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
+        totalCost(products[i]);
     })
 }
 
@@ -108,9 +109,12 @@ function setItems(product) {
         }
     }
 
-    
-
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+}
+
+function totalCost(product) {
+    console.log('The product price is', product.price);
 }
 
 onLoadCartNumbers();
