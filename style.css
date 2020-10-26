@@ -283,6 +283,15 @@ body {
 }
 
  /* styles for cart */
+ #mainbox {
+     font-size: 24px;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     cursor: pointer;
+     transition: all .6s;
+ }
+
  .slide-cart {
      position: absolute;
      top: 0px;
@@ -291,6 +300,7 @@ body {
      background-color: #222;
      z-index: 1;
      overflow: hidden;
+     transition: all .5s;
  }
 
  .inner-cart-container div {
