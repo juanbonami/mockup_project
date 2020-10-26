@@ -300,7 +300,7 @@ body {
      background-color: #222;
      z-index: 1;
      overflow: hidden;
-     transition: all .5s;
+     transition: all .6s;
  }
 
  .inner-cart-container div {
@@ -332,6 +332,6 @@ body {
 
  #closebtn {
      margin-top: 0px;
+     transition: all .6s;
  }
 
- 
