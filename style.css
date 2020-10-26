@@ -284,11 +284,11 @@ body {
 
  /* styles for cart */
  #mainbox {
-     font-size: 24px;
+     /* font-size: 24px;
      position: absolute;
      top: 0px;
      right: 0px;
-     cursor: pointer;
+     cursor: pointer; */
      transition: all .6s;
  }
 

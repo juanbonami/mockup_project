@@ -130,7 +130,7 @@ onLoadCartNumbers();
 
 function openCart() {
     document.getElementById('cart').style.height="300px";
-    document.getElementById('mainbox').style.marginTop="300px";
+    // document.getElementById('mainbox').style.marginTop="300px";
     document.getElementById('closebtn').style.marginTop="300px"
 }
 
@@ -138,5 +138,5 @@ function closeCart() {
     document.getElementById('cart').style.height="0px";
     document.getElementById('mainbox').style.marginTop="0px";
     document.getElementById('closebtn').style.marginTop="0px"
-    document.getElementById('mainbox').innerHTML="&#9776; Open";
+    // document.getElementById('mainbox').innerHTML="&#9776; Open";
 }
