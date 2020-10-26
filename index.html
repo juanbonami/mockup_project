@@ -28,7 +28,7 @@
         <script defer src="index.js"></script>
     </head>
     <body>
-        <div id="mainbox">
+        <div id="mainbox" onclick="openCart()">
             &#9776; cart
         </div>
         <div id="cart" class="slide-cart">
@@ -37,7 +37,7 @@
                     <div>Cart</div>
                     <div>Size</div>
                     <div>Quantity</div>
-                    <div class="close-btn">&times;</div>
+                    <div class="close-btn" onclick="closeCart()">&times;</div>
                 </div>
             </div>
         </div>
