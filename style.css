@@ -295,7 +295,21 @@ body {
 
  .inner-cart-container div {
      padding: 8px 8px 8px 64px;
-    font-size: 1rem;
-    color: #999;
-    width: 50px;
+     font-size: 1rem;
+     color: #999;
+     width: 50px;
+ }
+
+ .inner-cart-container .close-btn {
+     position: absolute;
+     top: 0px;
+     right: 50px;
+     font-size: 36px;
+     margin-left: 32px;
+ }
+
+ .cart-container {
+     height: 40px;
+     margin-top: 30px;
+     padding: 40px 40px 0px;
  }
