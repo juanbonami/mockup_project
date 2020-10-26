@@ -127,3 +127,8 @@ function totalCost(product) {
 }
 
 onLoadCartNumbers();
+
+function openCart() {
+    document.getElementById('cart').style.height="300px";
+    document.getElementById('mainbox').style.marginTop="300px";
+}
