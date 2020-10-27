@@ -304,30 +304,30 @@ body {
  }
 
  .inner-cart-container div {
-     padding: 8px 8px 8px 64px;
-     font-size: 1rem;
+     padding: 8px 8px 8px 10px;
+     font-size: 14px;
      color: #999;
-     width: 50px;
+     /* width: 50px; */
+     flex-basis: 50%;
  }
 
  .inner-cart-container .close-btn {
      position: absolute;
-     top: 0px;
+     top: 18px;
      right: 50px;
-     font-size: 36px;
+     font-size: 25px;
      margin-left: 32px;
      cursor: pointer;
  }
 
  .cart-container {
-     height: 40px;
-     margin-top: 30px;
-     padding: 40px 40px 0px;
+     padding: 40px 40px 0px 40px;
  }
 
  .inner-cart-container {
-     padding: 0 0 15px;
      border-bottom: 2px solid #3b3b3a;
+     display: flex;
+     flex-direction: row;
  }
 
  #closebtn {
