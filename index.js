@@ -126,6 +126,10 @@ function totalCost(product) {
     
 }
 
+function displayCart() {
+    
+}
+
 onLoadCartNumbers();
 
 function openCart() {
