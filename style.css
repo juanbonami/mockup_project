@@ -328,6 +328,7 @@ body {
      border-bottom: 2px solid #3b3b3a;
      display: flex;
      flex-direction: row;
+     padding: 0 0 10px;
  }
 
  #closebtn {
