@@ -136,8 +136,8 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product">
-                <span> ${item.name} </span>
+            <div>
+                <h2> ${item.name} </h2> 
             </div>`
         })
     }
