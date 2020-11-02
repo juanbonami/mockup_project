@@ -130,6 +130,11 @@ function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
     let productContainer = document.querySelector('.products-container');
+
+    console.log(cartItems);
+    if (cartItems && productContainer) {
+        productContainer.innerHTML = '';
+    }
 }
 
 onLoadCartNumbers();
