@@ -134,10 +134,18 @@ function displayCart() {
     console.log(cartItems);
     if (cartItems && productContainer) {
         productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="product">
+                <span> ${item.name} </span>
+            </div>`
+        })
     }
 }
 
 onLoadCartNumbers();
+
+displayCart();
 
 function openCart() {
     document.getElementById('cart').style.height="300px";
