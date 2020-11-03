@@ -336,3 +336,6 @@ body {
      transition: all .6s;
  }
 
+.products-container {
+    color: #999;
+}
