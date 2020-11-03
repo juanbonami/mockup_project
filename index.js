@@ -137,7 +137,9 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div>
-                <h2> ${item.name} </h2>
+                <h2> ${item.name} </h2> 
+            </div>
+            <div>
                 <h2> $${item.price}.00 </h2> 
             </div>`
         })
