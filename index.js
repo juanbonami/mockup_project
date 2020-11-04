@@ -136,12 +136,17 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="col-3">
-                ${item.name}  
-            </div>
-            <div class="col-3">
-                $${item.price}.00 
-            </div>`
+            <div class="row">
+                <div class="product-row col-3">
+                    ${item.name}  
+                </div>
+                <div class="product-row col-3">
+                    $${item.price}.00 
+                </div>
+                <div class="product-row col-3">
+                    ${item.inCart}
+                </div>
+            </div>    `
         })
     }
 }
