@@ -129,9 +129,14 @@ function totalCost(product) {
 function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
+    let subtotal = localStorage.getItem('totalCost');
+    subtotal = JSON.parse(subtotal);
+
     let productContainer = document.querySelector('.products-container');
+    let total = document.querySelector('.total-cost');
 
     console.log(cartItems);
+    console.log(subtotal);
     if (cartItems && productContainer) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -146,8 +151,10 @@ function displayCart() {
                 <div class="product-row col-4">
                     ${item.inCart}
                 </div>
-            </div>    `
+            </div>`
         })
+
+        total.innerHTML = `${subtotal}`
     }
 }
 

@@ -346,3 +346,7 @@ body {
     padding: 15px 0px;
     border-bottom: #3b3b3a solid 2px;
 }
+
+.total-cost {
+    color: #999;
+}
