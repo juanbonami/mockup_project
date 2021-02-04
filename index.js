@@ -137,13 +137,13 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="row">
-                <div class="product-row col-3">
+                <div class="product-row col-4">
                     ${item.name}  
                 </div>
-                <div class="product-row col-3">
+                <div class="product-row col-4">
                     $${item.price}.00 
                 </div>
-                <div class="product-row col-3">
+                <div class="product-row col-4">
                     ${item.inCart}
                 </div>
             </div>    `
@@ -156,9 +156,9 @@ onLoadCartNumbers();
 displayCart();
 
 function openCart() {
-    document.getElementById('cart').style.height="300px";
+    document.getElementById('cart').style.height="600px";
     // document.getElementById('mainbox').style.marginTop="300px";
-    document.getElementById('closebtn').style.marginTop="300px"
+    document.getElementById('closebtn').style.marginTop="600px"
 }
 
 function closeCart() {
