@@ -349,4 +349,13 @@ body {
 
 .total-cost {
     color: #999;
+    margin-left: 70%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-bottom: #3b3b3a solid 2px;
+    line-height: 3;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
