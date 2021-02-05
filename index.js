@@ -60,6 +60,7 @@ for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
         totalCost(products[i]);
+        displayCart();
     })
 }
 
@@ -154,13 +155,13 @@ function displayCart() {
             </div>`
         })
 
-        total.innerHTML = `${subtotal}`
+        total.innerHTML = `<div> $${subtotal} </div> <div> Subtotal </div>`
     }
 }
 
 onLoadCartNumbers();
 
-displayCart();
+//displayCart();
 
 function openCart() {
     document.getElementById('cart').style.height="600px";
