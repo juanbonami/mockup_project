@@ -161,7 +161,7 @@ function displayCart() {
 
 onLoadCartNumbers();
 
-//displayCart();
+displayCart();
 
 function openCart() {
     document.getElementById('cart').style.height="600px";
