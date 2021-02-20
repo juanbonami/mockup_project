@@ -151,7 +151,7 @@ function displayCart() {
                 </div>
                 <div id="remove" class="product-row col-4">
                     <div> ${item.inCart} </div>
-                    <p> REMOVE </p>
+                    <p class="remove-button"> REMOVE </p>
                 </div>
             </div>`
         })
@@ -162,7 +162,10 @@ function displayCart() {
 
 
 function removeItem() {
-    
+    let removeButton = document.querySelector('.remove-button');
+    removeButton.addEventListener('click', function() {
+        
+    })
 }
 
 

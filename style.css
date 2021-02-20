@@ -360,6 +360,24 @@ body {
     justify-content: space-between;
 }
 
+#remove {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-container p {
+    color: transparent;
+    transition: ease-in .3s;
+    font-size: .8rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.row:hover p {
+    color: #999;
+}
+
 .checkout-btn {
     text-decoration: none;
     color: #999;
