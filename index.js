@@ -149,8 +149,9 @@ function displayCart() {
                 <div class="product-row col-4">
                     $${item.price}.00 
                 </div>
-                <div class="product-row col-4">
-                    ${item.inCart}
+                <div id="remove" class="product-row col-4">
+                    <div> ${item.inCart} </div>
+                    <p> REMOVE </p>
                 </div>
             </div>`
         })
