@@ -169,6 +169,8 @@ function removeItem() {
 }
 
 
+
+
 onLoadCartNumbers();
 
 displayCart();
