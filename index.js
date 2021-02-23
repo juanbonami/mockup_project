@@ -39,6 +39,7 @@ faders.forEach(fader => {
 })
 
 
+
 let carts = document.querySelectorAll('.add-cart');
 
 let products = [
@@ -151,7 +152,7 @@ function displayCart() {
                 </div>
                 <div id="remove" class="product-row col-4">
                     <div> ${item.inCart} </div>
-                    <p class="remove-button"> REMOVE </p>
+                    <p class="remove-button" onClick="removeItem()"> REMOVE </p>
                 </div>
             </div>`
         })
@@ -162,11 +163,24 @@ function displayCart() {
 
 
 function removeItem() {
-    let removeButton = document.querySelector('.remove-button');
-    removeButton.addEventListener('click', function() {
-        
-    })
+    
+    let items = localStorage.getItem('productsInCart');
+    items = JSON.parse(items);
+    console.log(items);
+    if (items != null) {
+        window.localStorage.removeItem()
+        console.log(items);
+    }
+    
 }
+
+let items = localStorage.getItem('productsInCart');
+items = JSON.parse(items);
+console.log(items);
+// localStorage.removeItem(items[items]);
+// console.log(items);
+
+
 
 
 
