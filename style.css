@@ -14,11 +14,12 @@ html,body
 
 .grid-container {
     background: url('./images/Aesop-Homepage-Banner.jpg');
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 100%;
     /* border: solid; */
-    /* display: grid; */
+    /* display: grid; */ 
     /* grid-template-columns: 60px 60px 60px 60px 4fr ;
     grid-template-rows: 2fr 5fr;
     
