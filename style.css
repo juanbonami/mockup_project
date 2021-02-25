@@ -98,14 +98,10 @@ html,body
     bottom: -22px;
   }
 
-.flickity-page-dots {
-    /* width: 90%; */
-} 
-
   /* dots are lines */
   .flickity-page-dots .dot {
     height: 2px;
-    width: 300px;
+    width: 16%;
     margin: 0;
     border-radius: 0;
   }
@@ -257,8 +253,17 @@ body {
     
 }
 
+/* @media (max-width: 2000px) {
 
-@media only screen and (max-width: 375px) {
+    .flickity-page-dots .dot {
+        width: 250px;
+        
+      }
+} */
+
+
+
+@media (max-width: 375px) {
     .carousel {
         padding: 0px;
         margin-top: 50px;
@@ -269,17 +274,17 @@ body {
         /* border: solid; */
     }
 
-    .flickity-page-dots .dot {
-        width: 50px;
-        
-      }
-}
-
-@media only screen and (max-width: 1455px) {
-    .flickity-page-dots .dots {
+    .flickity-page-dots {
         width: 100%;
     }
+
+    /* .flickity-page-dots .dot {
+        width: 50px;
+        
+      } */
 }
+
+
 
 .add-cart {
     background-color: darkgrey;
