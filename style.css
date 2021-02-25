@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    
+    background-color: #fffef2;
 }
 
 html,body
@@ -278,10 +278,6 @@ body {
         width: 100%;
     }
 
-    /* .flickity-page-dots .dot {
-        width: 50px;
-        
-      } */
 }
 
 
