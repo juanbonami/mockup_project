@@ -263,7 +263,7 @@ body {
 
 
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
     .carousel {
         padding: 0px;
         margin-top: 50px;
