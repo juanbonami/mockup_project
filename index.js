@@ -166,21 +166,23 @@ function removeItem() {
     
     let items = localStorage.getItem('productsInCart');
     items = JSON.parse(items);
-    console.log(items);
+    //console.log(items);
     if (items != null) {
-        window.localStorage.removeItem()
+        delete items.handwash;
         console.log(items);
+        localStorage.setItem('productsInCart', JSON.stringify(items));
+
     }
     
 }
 
-let items = localStorage.getItem('productsInCart');
-items = JSON.parse(items);
-console.log(items);
+// let items = localStorage.getItem('productsInCart');
+// items = JSON.parse(items);
+// console.log(items);
 // localStorage.removeItem(items[items]);
 // console.log(items);
 
-
+removeItem();
 
 
 
