@@ -152,7 +152,7 @@ function displayCart() {
                 </div>
                 <div id="remove" class="product-row col-4">
                     <div> ${item.inCart} </div>
-                    <p class="remove-button" onClick="removeItem()"> REMOVE </p>
+                    <p id="remove-button"> REMOVE </p>
                 </div>
             </div>`
         })
@@ -166,13 +166,19 @@ function removeItem() {
     
     let items = localStorage.getItem('productsInCart');
     items = JSON.parse(items);
-    //console.log(items);
-    if (items != null) {
-        delete items.handwash;
-        console.log(items);
-        localStorage.setItem('productsInCart', JSON.stringify(items));
-
-    }
+    
+    window.addEventListener('load', () => {
+        let remove = document.querySelectorAll('#remove-button');
+        remove[0].addEventListener('click', () => {
+        if (items != null) {
+            delete items.handwash;
+            console.log(items);
+            localStorage.setItem('productsInCart', JSON.stringify(items));
+            }  
+        })
+      });
+    
+    
     
 }
 
