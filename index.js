@@ -174,6 +174,7 @@ function removeItem() {
             delete items.handwash;
             console.log(items);
             localStorage.setItem('productsInCart', JSON.stringify(items));
+            displayCart();
             }  
         })
       });
