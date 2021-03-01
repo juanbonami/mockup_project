@@ -152,7 +152,7 @@ function displayCart() {
                 </div>
                 <div id="remove" class="product-row col-4">
                     <div> ${item.inCart} </div>
-                    <p id="remove-button"> REMOVE </p>
+                    <p class="remove-button"> REMOVE </p>
                 </div>
             </div>`
         })
@@ -166,22 +166,43 @@ function removeItem() {
     
     let items = localStorage.getItem('productsInCart');
     items = JSON.parse(items);
+
+    let cartCost = localStorage.getItem('totalCost');
+    cartCost = parseFloat(cartCost);
     
     window.addEventListener('load', () => {
-        let remove = document.querySelectorAll('#remove-button');
-        remove[0].addEventListener('click', () => {
+        let remove = document.querySelectorAll('.remove-button');
+        for (let i = 0; i < remove.length; i++) {
+           remove[i].addEventListener('click', () => {
+               console.log(remove[i]);
         if (items != null) {
             delete items.handwash;
             console.log(items);
             localStorage.setItem('productsInCart', JSON.stringify(items));
+            Object.values(items).map(updatedPrice => {
+                console.log(updatedPrice.price)
+                localStorage.setItem('totalCost', updatedPrice.price);
+            })
+            console.log(items.handbalm.price);
             displayCart();
+            //localStorage.setItem('totalCost', parseInt(items[i].price));
+            
             }  
-        })
-      });
-    
-    
-    
+        }) 
+        }
+        
+      });  
 }
+
+// window.addEventListener('load', () => {
+//    let remove = document.querySelectorAll('.remove-button');
+// for (let i = 0; i < remove.length; i++) {
+//     remove[i].addEventListener('click', () => {
+//         displayCart();
+//     })
+// } 
+// })
+
 
 // let items = localStorage.getItem('productsInCart');
 // items = JSON.parse(items);
