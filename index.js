@@ -69,10 +69,12 @@ for (let i=0; i<carts.length; i++) {
 window.addEventListener('load', () => {
     let remove = document.querySelectorAll('.remove-button');
     for (let i = 0; i < remove.length; i++) {
+        console.log(products[i])
         remove[i].addEventListener('click', () => {
             console.log('works');
-            removeCartNumbers(products[i]);
-            displayCart();
+            console.log(products[i]);
+            removeCartNumbers();
+            console.log(products[i]);
         })
     }
 })
@@ -102,15 +104,15 @@ function cartNumbers(product) {
     
 }
 
-function removeCartNumbers(product) {
+function removeCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
     if (productNumbers) {
         localStorage.setItem('cartNumbers', productNumbers - 1);
-        //document.querySelector('.nav-link span').textContent = productNumbers - 1;
+        document.querySelector('.nav-link span').textContent = productNumbers - 1;
     }
-    decrementItems(product)
+    //decrementItems(product)
 }
 
 function setItems(product) {
@@ -143,7 +145,7 @@ function decrementItems(product) {
     if (cartItems[product.tag]) {
         cartItems[product.tag].inCart = 0;
     }
-    product.inCart = 0;
+    // product.inCart = 2;
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
 
