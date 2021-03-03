@@ -176,22 +176,35 @@ function removeItem() {
            remove[i].addEventListener('click', () => {
                console.log(remove[i]);
         if (items != null) {
-            delete items.handwash;
-            console.log(items);
-            localStorage.setItem('productsInCart', JSON.stringify(items));
-            Object.values(items).map(updatedPrice => {
-                console.log(updatedPrice.price)
-                localStorage.setItem('totalCost', updatedPrice.price);
+            Object.keys(items).map(i => {
+                delete items.handwash;
             })
-            console.log(items.handbalm.price);
-            displayCart();
-            //localStorage.setItem('totalCost', parseInt(items[i].price));
+            //delete items.handwash;
+            //console.log(Object.keys(items));
             
-            }  
+            // localStorage.setItem('productsInCart', JSON.stringify(items));
+            // Object.values(items).map(updatedPrice => {
+            //     console.log(updatedPrice.price)
+            //     localStorage.setItem('totalCost', updatedPrice.price);
+            // })
+            updatedItems(items);
+            displayCart();
+            
+            }
+
         }) 
         }
         
       });  
+}
+
+
+function updatedItems(param) {
+    localStorage.setItem('productsInCart', JSON.stringify(param));
+            Object.values(param).map(updatedPrice => {
+                console.log(updatedPrice.price)
+                localStorage.setItem('totalCost', updatedPrice.price);
+            })
 }
 
 // window.addEventListener('load', () => {
