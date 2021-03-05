@@ -62,22 +62,30 @@ for (let i=0; i<carts.length; i++) {
         cartNumbers(products[i]);
         totalCost(products[i]);
         displayCart();
+
     })
 
 }
 
-window.addEventListener('load', () => {
-    let remove = document.querySelectorAll('.remove-button');
-    for (let i = 0; i < remove.length; i++) {
-        console.log(products[i])
-        remove[i].addEventListener('click', () => {
-            console.log('works');
-            console.log(products[i]);
-            removeCartNumbers();
-            console.log(products[i]);
-        })
-    }
-})
+function removeButtonFunction() {
+        window.addEventListener('load', () => {
+        let remove = document.querySelectorAll('.remove-button');
+        console.log(remove)
+        for (let i = 0; i < remove.length; i++) {
+            console.log(products[i])
+            remove[i].addEventListener('click', () => {
+                console.log('works');
+                console.log(products[i]);
+                removeCartNumbers(products[i]);
+                console.log(products[i]);
+            })
+        }
+    })
+}
+
+removeButtonFunction();
+
+
 
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -104,7 +112,7 @@ function cartNumbers(product) {
     
 }
 
-function removeCartNumbers() {
+function removeCartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
 
@@ -112,7 +120,7 @@ function removeCartNumbers() {
         localStorage.setItem('cartNumbers', productNumbers - 1);
         document.querySelector('.nav-link span').textContent = productNumbers - 1;
     }
-    //decrementItems(product)
+    decrementItems(product)
 }
 
 function setItems(product) {
@@ -141,12 +149,29 @@ function setItems(product) {
 function decrementItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-
+    let productContainer = document.querySelector('.products-container');
+    console.log(cartItems[product.tag]);
+    
     if (cartItems[product.tag]) {
         cartItems[product.tag].inCart = 0;
+        if (cartItems[product.tag].inCart == 0) {
+            localStorage.removeItem(cartItems[product.tag]);
+            delete cartItems[product.tag];
+            console.log(cartItems)
+            //displayCart()
+            console.log(cartItems)
+            updateCart(cartItems);
+            
+            console.log(localStorage.getItem('productsInCart'));
+        }
+        //updateCart();
     }
+    //updateCart()
+    console.log(cartItems[product.tag]);
     // product.inCart = 2;
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+    //updateCart();
+    //displayCart()
 }
 
 function totalCost(product) {
@@ -160,6 +185,42 @@ function totalCost(product) {
        localStorage.setItem('totalCost', product.price); 
     }
     
+}
+
+function updateCart(product) {
+    // let cartItems = localStorage.getItem('productsInCart');
+    // cartItems = JSON.parse(cartItems);
+
+    let productContainer = document.querySelector('.products-container');
+    console.log(product)
+
+    for (let i in product) {
+        console.log(product[i].inCart)
+        console.log(product[i]);
+        if (product[i]) {
+           productContainer.innerHTML = `
+            <div class="row">
+                <div class="product-row col-4">
+                    ${product[i].name}  
+                </div>
+                <div class="product-row col-4">
+                    $${product[i].price}.00 
+                </div>
+                <div id="remove" class="product-row col-4">
+                    <div> ${product[i].inCart} </div>
+                    <p class="remove-button"> REMOVE </p>
+                </div>
+            </div>`; 
+        }
+        removeButtonFunction();
+    }
+    
+
+    // Object.values(cartItems).map(val => {
+    //     if (val.inCart == 0) {
+            
+    //     }
+    // })
 }
 
 function displayCart() {
