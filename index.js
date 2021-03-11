@@ -65,7 +65,20 @@ function ready() {
         let button = addToCartButton[i]
         button.addEventListener('click', addToCartClicked)
     }
+
+    //let cartNumber = document.getElementById('cart-number').addEventListener('change', cartNumberChanged)
+
     document.getElementsByClassName('btn-clicked')[0].addEventListener('click', purchaseClicked)
+}
+
+function cartNumberChanged() {
+    let cartItems = document.getElementsByClassName('cart-items')[0]
+    let totalNumber = 0
+    let quantity = cartItems.getElementsByClassName('cart-quantity-input')
+    for (let i = 0; i < quantity.length; i++) {
+        totalNumber += parseInt(quantity[i].value)
+    }
+    console.log(totalNumber)
 }
 
 function purchaseClicked() {
@@ -88,6 +101,7 @@ function quantityChanged(event) {
     let input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
+
     }
     updateCartTotal()
 }
@@ -147,6 +161,7 @@ function updateCartTotal() {
         total = total + (price * quantity)
     }
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    cartNumberChanged()
 }
 
 
