@@ -53,6 +53,12 @@ function ready() {
         let button = removeCartItemButton[i]
         button.addEventListener('click', removeCartItem)
     }
+
+    let quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        let input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
 }
 
 
@@ -61,6 +67,8 @@ function removeCartItem(event) {
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
+
+
 
 function updateCartTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0]
