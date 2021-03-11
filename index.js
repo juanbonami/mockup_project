@@ -88,7 +88,39 @@ function addToCartClicked(event) {
     let title = shopItem.getElementsByClassName('item-title')[0].innerText
     let price = shopItem.getElementsByClassName('item-price')[0].innerText
     console.log(title, price)
+    addItemToCart(title, price)
+    updateCartTotal()
+}
 
+function addItemToCart(title, price) {
+    let cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    cartRow.classList.add('row')
+    let cartItems = document.getElementsByClassName('cart-items')[0]
+    let cartItemNames = cartItems.getElementsByClassName('item-title')
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart')
+            return
+        }
+    }
+    let cartRowContents = `
+            
+                <div class="product-row col-4 item-title">
+                    ${title}
+                </div>
+                <div class="product-row col-4 cart-price">
+                    ${price}
+                </div>
+                <div id="remove" class="product-row col-4">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <p class="remove-button"> REMOVE </p>
+                </div>
+            `
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('remove-button')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
 function updateCartTotal() {
@@ -99,7 +131,8 @@ function updateCartTotal() {
         let cartRow = cartRows[i]
         let priceElement = cartRow.getElementsByClassName('cart-price')[0]
         let quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        let price = parseFloat(priceElement.innerText.replace('$', ''))
+        console.log(quantityElement)
+        let price = parseInt(priceElement.innerHTML.replace('$', ''))
         let quantity = quantityElement.value
         total = total + (price * quantity)
     }
