@@ -82,6 +82,15 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
+function addToCartClicked(event) {
+    let button = event.target
+    let shopItem = button.parentElement
+    let title = shopItem.getElementsByClassName('item-title')[0].innerText
+    let price = shopItem.getElementsByClassName('item-price')[0].innerText
+    console.log(title, price)
+
+}
+
 function updateCartTotal() {
     let cartItemContainer = document.getElementsByClassName('cart-items')[0]
     let cartRows = cartItemContainer.getElementsByClassName('cart-row')
