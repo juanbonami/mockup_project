@@ -59,6 +59,12 @@ function ready() {
         let input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
+
+    let addToCartButton = document.getElementsByClassName('add-cart')
+    for (var i = 0; i < addToCartButton.length; i++) {
+        let button = addToCartButton[i]
+        button.addEventListener('click', addToCartClicked)
+    }
 }
 
 
