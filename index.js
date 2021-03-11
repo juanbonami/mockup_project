@@ -78,7 +78,7 @@ function cartNumberChanged() {
     for (let i = 0; i < quantity.length; i++) {
         totalNumber += parseInt(quantity[i].value)
     }
-    console.log(totalNumber)
+    document.getElementById('cart-number').innerText = totalNumber
 }
 
 function purchaseClicked() {
@@ -111,7 +111,6 @@ function addToCartClicked(event) {
     let shopItem = button.parentElement
     let title = shopItem.getElementsByClassName('item-title')[0].innerText
     let price = shopItem.getElementsByClassName('item-price')[0].innerText
-    console.log(title, price)
     addItemToCart(title, price)
     updateCartTotal()
 }
@@ -155,7 +154,6 @@ function updateCartTotal() {
         let cartRow = cartRows[i]
         let priceElement = cartRow.getElementsByClassName('cart-price')[0]
         let quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        console.log(quantityElement)
         let price = parseInt(priceElement.innerHTML.replace('$', ''))
         let quantity = quantityElement.value
         total = total + (price * quantity)
