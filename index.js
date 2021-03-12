@@ -98,14 +98,13 @@ function quantityChanged(event) {
     let input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
-
     }
     updateCartTotal()
 }
 
 function addToCartClicked(event) {
     let button = event.target
-    let shopItem = button.parentElement
+    let shopItem = button.parentElement.parentElement
     let title = shopItem.getElementsByClassName('item-title')[0].innerText
     let price = shopItem.getElementsByClassName('item-price')[0].innerText
     addItemToCart(title, price)
