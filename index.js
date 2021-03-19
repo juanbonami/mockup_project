@@ -160,9 +160,13 @@ function updateCartTotal() {
 
 
 function openCart() {
-    document.getElementById('cart').style.height = "600px";
-    // document.getElementById('mainbox').style.marginTop="300px";
-    document.getElementById('closebtn').style.marginTop = "600px"
+    let currentNumber = document.getElementById('cart-number').innerText
+    console.log(currentNumber)
+    if (currentNumber != 0) {
+        document.getElementById('cart').style.height = "600px";
+        document.getElementById('closebtn').style.marginTop = "600px"
+    }
+
 }
 
 function closeCart() {

@@ -137,7 +137,6 @@ html,body
   .carousel-cell {
     width: 25%;
     margin-right: 30px;
-    /* border: solid; */
     text-align: center;
     
   }
@@ -160,8 +159,14 @@ html,body
 
   .carousel-cell.largerSlider {
       width: 100%;
-      
+      /* margin-right: 10px; */
   }
+
+ /* .largerSlider {
+    width: 100%; 
+    height: 100%;
+    margin-right: 10px;
+  } */
 
 
   
