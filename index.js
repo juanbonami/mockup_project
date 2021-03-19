@@ -161,10 +161,10 @@ function updateCartTotal() {
 
 function openCart() {
     let currentNumber = document.getElementById('cart-number').innerText
-    console.log(currentNumber)
     if (currentNumber != 0) {
         document.getElementById('cart').style.height = "600px";
         document.getElementById('closebtn').style.marginTop = "600px"
+        disableScroll()
     }
 
 }
@@ -173,5 +173,13 @@ function closeCart() {
     document.getElementById('cart').style.height = "0px";
     document.getElementById('mainbox').style.marginTop = "0px";
     document.getElementById('closebtn').style.marginTop = "0px"
-    // document.getElementById('mainbox').innerHTML="&#9776; Open";
+    enableScroll()
+}
+
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    document.body.style.overflow = 'initial';
 }
