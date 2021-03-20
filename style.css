@@ -83,7 +83,9 @@ html,body
     /* border: solid; */
 }
 
-
+.navbar-toggler {
+    width: 4rem;
+}
 
 
 /* carousel */
