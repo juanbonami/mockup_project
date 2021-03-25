@@ -190,3 +190,8 @@ let screenSize = window.screen.width;
 window.addEventListener("resize", function (event) {
     console.log(window.screen.width)
 });
+
+let firstCell = document.getElementsByClassName('first-cell')[0]
+let productsIntro = document.getElementsByClassName('products-intro')[0]
+console.log(firstCell, productsIntro)
+productsIntro.appendChild(firstCell)
