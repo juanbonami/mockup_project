@@ -183,3 +183,10 @@ function disableScroll() {
 function enableScroll() {
     document.body.style.overflow = 'initial';
 }
+
+let screenSize = window.screen.width;
+
+
+window.addEventListener("resize", function (event) {
+    console.log(window.screen.width)
+});
