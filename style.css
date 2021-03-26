@@ -176,7 +176,7 @@ html,body
   .first-text-in-second-parent-div {
     /* padding-right: 100px;
     width: 640px; */
-    padding-top: 0px;
+    padding: 0 1rem 1.5rem 1rem;
     text-align: center;
     /* border: solid; */
 }

@@ -187,11 +187,15 @@ function enableScroll() {
 let screenSize = window.screen.width;
 
 
-window.addEventListener("resize", function (event) {
-    console.log(window.screen.width)
-});
+// window.addEventListener("resize", function () {
+//     let screenSize = window.screen.width
+//     if (screenSize <= 768) {
+//         let firstCell = document.getElementsByClassName('first-cell')[0]
+//         let productsIntro = document.getElementsByClassName('products-intro')[0]
+//         console.log(firstCell, productsIntro)
+//         let slider = document.getElementsByClassName('flickity-slider')[0]
+//         productsIntro.classList.add('carousel-cell')
+//         slider.prepend(productsIntro)
+//     }
 
-let firstCell = document.getElementsByClassName('first-cell')[0]
-let productsIntro = document.getElementsByClassName('products-intro')[0]
-console.log(firstCell, productsIntro)
-productsIntro.appendChild(firstCell)
+// });
