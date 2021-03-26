@@ -137,7 +137,7 @@ html,body
 
   /* size of cell */
   .carousel-cell {
-    width: 25%;
+    /* width: 25%; */
     margin-right: 30px;
     text-align: center;
     
@@ -150,7 +150,7 @@ html,body
 
   .carousel-cell.largeCell {
       /* margin-right: 40px; */
-      width: 100%;
+      /* width: 100%; */
   }
 
   .carousel-cell.mediumCell {
