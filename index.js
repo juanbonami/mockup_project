@@ -12,9 +12,12 @@
             groupCells: 1,
             setGallerySize: false
         })
+        $('.image-slider-large').flickity();
     })
 
 })(jQuery)
+
+
 
 
 const faders = document.querySelectorAll('.fade-in');
