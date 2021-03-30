@@ -12,7 +12,9 @@
             groupCells: 1,
             setGallerySize: false
         })
-        $('.image-slider-large').flickity();
+        $('.image-slider-large').flickity({
+            setGallerySize: false
+        });
     })
 
 })(jQuery)
